@@ -8,16 +8,58 @@
       <fullName>Alexander Sergeev</fullName>
       <city>Perm</city>
       <email>alexperm@gmail.com</email>
-      <startDate>2019-12-12</startDate>
+      <startDate>2019-12-13</startDate>
       <contractSigned>false</contractSigned>
       <curriculumId>1</curriculumId>
       <taskResults>
-        <taskResult>
+        <task id="1">
           <status>In the process of studying</status>
-        </taskResult>
-        <taskResult>
+        </task>
+        <task id="2">
+          <status>The study has not begun</status>
+        </task>
+        <task id="3">
           <status>Execution did not start</status>
-        </taskResult>
+        </task>
+        <task id="4">
+          <status>The study has not begun</status>
+        </task>
+        <task id="5">
+          <status>Execution did not start</status>
+        </task>
+        <task id="6">
+          <status>The study has not begun</status>
+        </task>
+        <task id="7">
+          <status>Execution did not start</status>
+        </task>
+        <task id="8">
+          <status>The study has not begun</status>
+        </task>
+        <task id="9">
+          <status>The study has not begun</status>
+        </task>
+        <task id="10">
+          <status>The study has not begun</status>
+        </task>
+        <task id="11">
+          <status>Execution did not start</status>
+        </task>
+        <task id="12">
+          <status>Execution did not start</status>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+        </task>
       </taskResults>
     </student>
 
@@ -29,14 +71,70 @@
       <contractSigned>true</contractSigned>
       <curriculumId>1</curriculumId>
       <taskResults>
-        <taskResult>
+        <task id="1">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="2">
           <status>Study completed</status>
           <grade>5</grade>
-        </taskResult>
-        <taskResult>
+        </task>
+        <task id="3">
           <status>Assignment Accepted</status>
           <grade>4</grade>
-        </taskResult>
+        </task>
+        <task id="4">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="5">
+          <status>Assignment Accepted</status>
+          <grade>4</grade>
+        </task>
+        <task id="6">
+          <status>Study completed</status>
+          <grade>3</grade>
+        </task>
+        <task id="7">
+          <status>Assignment Accepted</status>
+          <grade>4</grade>
+        </task>
+        <task id="8">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="9">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="10">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="11">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="12">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="13">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="14">
+          <status>Assignment Accepted</status>
+          <grade>3</grade>
+        </task>
+        <task id="15">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="16">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
       </taskResults>
     </student>
 
@@ -48,15 +146,57 @@
       <contractSigned>false</contractSigned>
       <curriculumId>2</curriculumId>
       <taskResults>
-        <taskResult>
+        <task id="1">
           <status>The study has not begun</status>
-        </taskResult>
-        <taskResult>
+        </task>
+        <task id="2">
           <status>Execution did not start</status>
-        </taskResult>
+        </task>
+        <task id="3">
+          <status>Execution did not start</status>
+        </task>
+        <task id="4">
+          <status>The study has not begun</status>
+        </task>
+        <task id="5">
+          <status>Execution did not start</status>
+        </task>
+        <task id="6">
+          <status>The study has not begun</status>
+        </task>
+        <task id="7">
+          <status>Execution did not start</status>
+        </task>
+        <task id="8">
+          <status>The study has not begun</status>
+        </task>
+        <task id="9">
+          <status>The study has not begun</status>
+        </task>
+        <task id="10">
+          <status>The study has not begun</status>
+        </task>
+        <task id="11">
+          <status>Execution did not start</status>
+        </task>
+        <task id="12">
+          <status>Execution did not start</status>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+        </task>
       </taskResults>
     </student>
-    
+
     <student id="4">
       <fullName>Ivan Fedorov</fullName>
       <city>Marrakesh</city>
@@ -65,20 +205,71 @@
       <contractSigned>false</contractSigned>
       <curriculumId>3</curriculumId>
       <taskResults>
-        <taskResult>
+        <task id="1">
           <status>Study completed</status>
           <grade>5</grade>
-        </taskResult>
-        <taskResult>
+        </task>
+        <task id="2">
+          <status>Study completed</status>
+          <grade>5</grade>
+        </task>
+        <task id="3">
+          <status>Assignment Accepted</status>
+          <grade>3</grade>
+        </task>
+        <task id="4">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="5">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="6">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="7">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="8">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="9">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="10">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="11">
           <status>Is under verification</status>
-        </taskResult>
+        </task>
+        <task id="12">
+          <status>Is under verification</status>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+        </task>
       </taskResults>
     </student>
     
   </studentProfiles>
 
 
-  <info>
+  <Info>
 
     <curriculumProfiles>
 
@@ -354,7 +545,7 @@
       
     </taskProfiles>
 
-  </info>
+  </Info>
 
 
 </TheEducationalCenter>

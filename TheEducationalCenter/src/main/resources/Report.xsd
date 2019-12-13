@@ -21,7 +21,7 @@
           </xs:unique>
         </xs:element>
 
-        <xs:element name="info">
+        <xs:element name="Info">
           <xs:complexType>
             <xs:sequence>
 
@@ -114,12 +114,12 @@
 
     <!--USING THIS KEY FOR REFERENCE -->
     <xs:key name="StudentTaskKey">
-      <xs:selector xpath=".//student/TaskProfile/taskResult"/>
-      <xs:field xpath="@taskId"/>
+      <xs:selector xpath=".//Info/taskProfiles/task"/>
+      <xs:field xpath="@id"/>
     </xs:key>
 
     <xs:keyref name="StudentTaskKeyRef" refer="StudentTaskKey">
-      <xs:selector xpath=".//taskResults/task"/>
+      <xs:selector xpath=".//studentProfiles/student/taskResults/task"/>
       <xs:field xpath="@id"/>
     </xs:keyref>
 
@@ -143,7 +143,7 @@
       <xs:element name="taskResults">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="taskResult" maxOccurs="unbounded">
+            <xs:element name="task" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="status">
@@ -161,6 +161,7 @@
                   </xs:element>
                   <xs:element name="grade" type="PointScale" minOccurs="0"/>
                 </xs:sequence>
+                <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
