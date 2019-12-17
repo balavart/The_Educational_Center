@@ -11,36 +11,14 @@ import org.xml.sax.SAXException;
  */
 public class Main {
   public static void main(String[] args)
-      throws IOException, SAXException, ParserConfigurationException {
+      throws ParserConfigurationException, SAXException, IOException {
+    Controller controller = new Controller();
+    controller.startApp();
+//    TaskHelper taskHelper = new TaskHelper();
+//    CourseHelper courseHelper = new CourseHelper(taskHelper);
+//    CurriculumHelper curriculumHelper = new CurriculumHelper(courseHelper);
+//    StudentHelper studentHelper = new StudentHelper(curriculumHelper,taskHelper);
+//    studentHelper.getAllStudents();
 
-    StudentHelper studentHelper = new StudentHelper();
-    CurriculumHelper curriculumHelper = new CurriculumHelper();
-    CourseHelper courseHelper = new CourseHelper();
-    TaskHelper taskHelper = new TaskHelper();
-
-    List<Student> studentList = studentHelper.getAllStudents();
-    List<Curriculum> curriculumList = curriculumHelper.getCurriculum();
-    Map<Integer, Course> courseMap = courseHelper.getAllCourses();
-    Map<Integer, Task> taskMap = taskHelper.getAllTasks();
-
-    for (Student student : studentList) {
-      System.out.println(student);
-    }
-
-    for (Curriculum curriculum : curriculumList) {
-      System.out.println(curriculum);
-    }
-
-    for (Map.Entry<Integer, Course> entry : courseMap.entrySet()) {
-      Integer key = entry.getKey();
-      Course value = entry.getValue();
-      System.out.println(key + " " + value);
-    }
-
-    for (Map.Entry<Integer, Task> entry : taskMap.entrySet()) {
-      Integer key = entry.getKey();
-      Task value = entry.getValue();
-      System.out.println(key + " " + value);
-    }
   }
 }

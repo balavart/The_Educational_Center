@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,18 +20,23 @@ import org.xml.sax.SAXException;
 public class CurriculumHelper {
 
   private Document document;
+  private CourseHelper courseHelper;
 
-  public CurriculumHelper() throws ParserConfigurationException, IOException, SAXException {
+  public CurriculumHelper(CourseHelper courseHelper) throws ParserConfigurationException, IOException, SAXException {
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
     dbf.setIgnoringElementContentWhitespace(true);
     DocumentBuilder documentBuilder = dbf.newDocumentBuilder();
     document = documentBuilder.parse("src/main/resources/StudentReport.xml");
+    this.courseHelper = courseHelper;
   }
 
-  public List<Curriculum> getCurriculum() {
-    List<Curriculum> curriculumList = new ArrayList<>();
-    Element theEducationalCenter = document.getDocumentElement();
-    NodeList nodeCurriculumList = theEducationalCenter.getElementsByTagName("curriculum");
+  public Map<Integer, Curriculum> getCurriculum() {
+    Map<Integer, Curriculum> curriculumMap = new HashMap<>();
+
+    Element curriculumInfo = document.getDocumentElement();
+    NodeList nodeCurriculumList = curriculumInfo.getElementsByTagName("curriculum");
+
+    int curriculumIdCount = 0;
 
     for (int i = 0; i < nodeCurriculumList.getLength(); i++) {
       Node curriculumNode = nodeCurriculumList.item(i);
@@ -37,31 +44,41 @@ public class CurriculumHelper {
 
       Integer id = Integer.valueOf(curriculumNode.getAttributes().item(0).getNodeValue());
       String title =
-          theEducationalCenter
-              .getElementsByTagName("title")
-              .item(i)
-              .getFirstChild()
-              .getTextContent();
+          curriculumInfo.getElementsByTagName("title").item(i).getFirstChild().getTextContent();
       String author =
-          theEducationalCenter
-              .getElementsByTagName("author")
-              .item(i)
-              .getFirstChild()
-              .getTextContent();
+          curriculumInfo.getElementsByTagName("author").item(i).getFirstChild().getTextContent();
       String creationDate =
-          theEducationalCenter
+          curriculumInfo
               .getElementsByTagName("creationDate")
               .item(i)
               .getFirstChild()
               .getTextContent();
+      List<Course> courseList = new ArrayList<>();
+
+      NodeList courseProfileNodeList = document.getElementsByTagName("courseTasksList");
+      Node courseProfileNode = courseProfileNodeList.item(curriculumIdCount);
+      Element elementCourseProfile = (Element) courseProfileNode;
+      NodeList elementCourseList = elementCourseProfile.getChildNodes();
+
+      for (int j = 0; j < elementCourseList.getLength(); j++) {
+        Node courseNode = elementCourseList.item(j);
+        if (courseNode.getNodeType() == Node.ELEMENT_NODE) {
+          Element elementCourse = (Element) courseNode;
+
+          Integer curId =
+              Integer.valueOf(elementCourse.getElementsByTagName("id").item(0).getTextContent());
+          courseList.add(courseHelper.getAllCourses().get(curId));
+        }
+      }
+      curriculumIdCount++;
 
       curriculum.setId(id);
       curriculum.setTitle(title);
       curriculum.setAuthor(author);
       curriculum.setCreationDate(creationDate);
-      curriculumList.add(curriculum);
+      curriculum.setCurriculumCourseList(courseList);
+      curriculumMap.put(id, curriculum);
     }
-
-    return curriculumList;
+    return curriculumMap;
   }
 }

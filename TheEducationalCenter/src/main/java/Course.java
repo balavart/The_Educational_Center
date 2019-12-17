@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * @author Vardan Balayan
  * @version 1.8
@@ -9,6 +11,7 @@ public class Course {
   private String title;
   private String author;
   private String creationDate;
+  private List<Task> courseTaskList;
 
   public void setId(Integer id) {
     this.id = id;
@@ -26,6 +29,10 @@ public class Course {
     this.creationDate = creationDate;
   }
 
+  public void setCourseTaskList(List<Task> courseTaskList) {
+    this.courseTaskList = courseTaskList;
+  }
+
   @Override
   public String toString() {
     return "Course{"
@@ -40,6 +47,8 @@ public class Course {
         + ", Creation Date='"
         + creationDate
         + '\''
+        + ", Course Task List="
+        + courseTaskList
         + '}';
   }
 }

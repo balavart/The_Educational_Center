@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,7 +12,7 @@ public class Curriculum {
   private String title;
   private String author;
   private String creationDate;
-  private Map<Integer, Course> curriculumCourseList;
+  private List<Course> curriculumCourseList;
 
   public void setId(Integer id) {
     this.id = id;
@@ -29,7 +30,7 @@ public class Curriculum {
     this.creationDate = creationDate;
   }
 
-  public void setCurriculumCourseList(Map<Integer, Course> curriculumCourseList) {
+  public void setCurriculumCourseList(List<Course> curriculumCourseList) {
     this.curriculumCourseList = curriculumCourseList;
   }
 
@@ -47,7 +48,7 @@ public class Curriculum {
         + ", Creation Date='"
         + creationDate
         + '\''
-        + ", Curriculum CourseList="
+        + ", Curriculum Course List="
         + curriculumCourseList
         + '}';
   }

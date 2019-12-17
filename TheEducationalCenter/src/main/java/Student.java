@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Vardan Balayan
  * @version 1.8
@@ -10,36 +13,45 @@ public class Student {
   private String city;
   private String email;
   private String startDate;
-  private Boolean contractSigned;
-
+  private boolean contractSigned;
+  private Curriculum curriculum;
+  private Map<Task, String> taskResults;
+  private String grade;
 
   public void setId(Integer id) {
     this.id = id;
   }
 
-
   public void setFullName(String fullName) {
     this.fullName = fullName;
   }
-
 
   public void setCity(String city) {
     this.city = city;
   }
 
-
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
-
   public void setContractSigned(boolean contractSigned) {
     this.contractSigned = contractSigned;
+  }
+
+  public void setCurriculum(Curriculum curriculum) {
+    this.curriculum = curriculum;
+  }
+
+  public void setTaskResults(Map<Task, String> taskResults) {
+    this.taskResults = taskResults;
+  }
+
+  public void setGrade(String grade) {
+    this.grade = grade;
   }
 
   @Override
@@ -50,7 +62,7 @@ public class Student {
         + ", Full Name='"
         + fullName
         + '\''
-        + ", Region='"
+        + ", City='"
         + city
         + '\''
         + ", E-mail='"
@@ -60,7 +72,14 @@ public class Student {
         + startDate
         + '\''
         + ", Contract Signed="
-        + (contractSigned ? "yes" : "no")
+        + (contractSigned ? "Yes" : "No")
+        + ", Curriculum="
+        + curriculum
+        + ", Task result="
+        + taskResults
+        + ", grade='"
+        + grade
+        + '\''
         + '}';
   }
 }
