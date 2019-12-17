@@ -1,3 +1,4 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,10 +70,7 @@ public class StudentHelper {
                   .getTextContent());
       Curriculum curriculum = curriculumHelper.getCurriculum().get(curriculumId);
       Map<Task, String> taskResults = new HashMap<>();
-
-
-      String grade =
-          studentProfile.getElementsByTagName("grade").item(i).getFirstChild().getTextContent();
+      Integer grade = null;
 
       NodeList taskProfileNodeList = document.getElementsByTagName("taskResults");
       Node taskProfileNode = taskProfileNodeList.item(taskIdCount);
@@ -81,17 +79,25 @@ public class StudentHelper {
 
       for (int j = 0; j < elementTaskList.getLength(); j++) {
         Node taskNode = elementTaskList.item(j);
+
         if (taskNode.getNodeType() == Node.ELEMENT_NODE) {
           Element elementTask = (Element) taskNode;
 
           Integer taskId = Integer.valueOf(elementTask.getAttributes().item(0).getNodeValue());
           String taskStatus =
-              studentProfile.getElementsByTagName("status").item(i).getFirstChild().getTextContent();
+              elementTask.getElementsByTagName("status").item(0).getFirstChild().getTextContent();
 
-          taskResults.put(taskHelper.getAllTasks().get(taskId), taskStatus);
+          grade =
+              Integer.valueOf(
+                  elementTask
+                      .getElementsByTagName("grade")
+                      .item(0)
+                      .getFirstChild()
+                      .getTextContent());
 
-          System.out.println(taskId);
-          System.out.println(taskStatus);
+          taskResults.put(
+              taskHelper.getAllTasks().get(taskId),
+              taskStatus + ((grade == 0) ? "" : ", grade = " + grade));
         }
       }
       taskIdCount++;
@@ -104,7 +110,6 @@ public class StudentHelper {
       student.setContractSigned(contractSigned);
       student.setCurriculum(curriculum);
       student.setTaskResults(taskResults);
-//      student.setGrade(grade);
       students.add(student);
     }
     return students;

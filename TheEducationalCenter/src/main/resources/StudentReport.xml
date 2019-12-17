@@ -14,51 +14,67 @@
       <taskResults>
         <task id="1">
           <status>In the process of studying</status>
+          <grade>0</grade>
         </task>
         <task id="2">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="3">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="4">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="5">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="6">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="7">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="8">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="9">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="10">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="11">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="12">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="13">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="14">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="15">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="16">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
       </taskResults>
     </student>
@@ -148,51 +164,67 @@
       <taskResults>
         <task id="1">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="2">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="3">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="4">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="5">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="6">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="7">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="8">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="9">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="10">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="11">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="12">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="13">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="14">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="15">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="16">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
       </taskResults>
     </student>
@@ -247,21 +279,27 @@
         </task>
         <task id="11">
           <status>Is under verification</status>
+          <grade>0</grade>
         </task>
         <task id="12">
           <status>Is under verification</status>
+          <grade>0</grade>
         </task>
         <task id="13">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="14">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
         <task id="15">
           <status>The study has not begun</status>
+          <grade>0</grade>
         </task>
         <task id="16">
           <status>Execution did not start</status>
+          <grade>0</grade>
         </task>
       </taskResults>
     </student>

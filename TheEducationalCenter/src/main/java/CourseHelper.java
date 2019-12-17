@@ -52,7 +52,6 @@ public class CourseHelper {
 
         List<Task> taskList = new ArrayList<>();
 
-
         NodeList taskProfileNodeList = document.getElementsByTagName("courseTasksList");
         Node taskProfileNode = taskProfileNodeList.item(taskIdCount);
         Element elementTaskProfile = (Element) taskProfileNode;

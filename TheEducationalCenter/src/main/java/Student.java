@@ -16,7 +16,6 @@ public class Student {
   private boolean contractSigned;
   private Curriculum curriculum;
   private Map<Task, String> taskResults;
-  private String grade;
 
   public void setId(Integer id) {
     this.id = id;
@@ -50,10 +49,6 @@ public class Student {
     this.taskResults = taskResults;
   }
 
-  public void setGrade(String grade) {
-    this.grade = grade;
-  }
-
   @Override
   public String toString() {
     return "Student{"
@@ -77,8 +72,6 @@ public class Student {
         + curriculum
         + ", Task result="
         + taskResults
-        + ", grade='"
-        + grade
         + '\''
         + '}';
   }

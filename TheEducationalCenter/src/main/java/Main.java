@@ -14,11 +14,5 @@ public class Main {
       throws ParserConfigurationException, SAXException, IOException {
     Controller controller = new Controller();
     controller.startApp();
-//    TaskHelper taskHelper = new TaskHelper();
-//    CourseHelper courseHelper = new CourseHelper(taskHelper);
-//    CurriculumHelper curriculumHelper = new CurriculumHelper(courseHelper);
-//    StudentHelper studentHelper = new StudentHelper(curriculumHelper,taskHelper);
-//    studentHelper.getAllStudents();
-
   }
 }

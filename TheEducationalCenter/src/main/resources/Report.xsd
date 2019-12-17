@@ -159,7 +159,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="grade" type="PointScale" minOccurs="0"/>
+                  <xs:element name="grade" type="PointScale" minOccurs="1"/>
                 </xs:sequence>
                 <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
               </xs:complexType>
@@ -274,7 +274,7 @@
 
   <xs:simpleType name="PointScale">
     <xs:restriction base="xs:int">
-      <xs:pattern value="[1-5]"/>
+      <xs:pattern value="[0-5]"/>
     </xs:restriction>
   </xs:simpleType>
 
