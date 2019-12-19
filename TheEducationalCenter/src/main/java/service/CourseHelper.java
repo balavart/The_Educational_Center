@@ -1,3 +1,5 @@
+package service;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +8,8 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import module.Course;
+import module.Task;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,7 +26,8 @@ public class CourseHelper {
   private Document document;
   private TaskHelper taskHelper;
 
-  public CourseHelper(TaskHelper taskHelper) throws ParserConfigurationException, IOException, SAXException {
+  public CourseHelper(TaskHelper taskHelper)
+      throws ParserConfigurationException, IOException, SAXException {
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
     dbf.setIgnoringElementContentWhitespace(true);
     DocumentBuilder documentBuilder = dbf.newDocumentBuilder();

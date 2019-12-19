@@ -1,5 +1,6 @@
+package module;
+
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author Vardan Balayan
@@ -18,6 +19,10 @@ public class Curriculum {
     this.id = id;
   }
 
+  public String getTitle() {
+    return title;
+  }
+
   public void setTitle(String title) {
     this.title = title;
   }
@@ -30,26 +35,36 @@ public class Curriculum {
     this.creationDate = creationDate;
   }
 
+  public List<Course> getCurriculumCourseList() {
+    return curriculumCourseList;
+  }
+
   public void setCurriculumCourseList(List<Course> curriculumCourseList) {
     this.curriculumCourseList = curriculumCourseList;
   }
 
+  private String getCoursesTitle() {
+    StringBuilder stringBuilder = new StringBuilder();
+    for (Course course : curriculumCourseList) {
+      stringBuilder.append(course.getTitle()).append("\n");
+    }
+    return stringBuilder.toString();
+  }
+
   @Override
   public String toString() {
-    return "Curriculum{"
-        + "id="
-        + id
-        + ", Title='"
+    return "Title: "
         + title
-        + '\''
-        + ", Author='"
+        + "\n"
+        + "Author: "
         + author
-        + '\''
-        + ", Creation Date='"
+        + "\n"
+        + "Creation Date: "
         + creationDate
-        + '\''
-        + ", Curriculum Course List="
-        + curriculumCourseList
-        + '}';
+        + "\n"
+        + "\n"
+        + "Curriculum Course List: "
+        + "\n"
+        + getCoursesTitle();
   }
 }

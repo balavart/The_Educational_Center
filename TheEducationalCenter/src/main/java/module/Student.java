@@ -1,4 +1,5 @@
-import java.util.List;
+package module;
+
 import java.util.Map;
 
 /**
@@ -21,6 +22,10 @@ public class Student {
     this.id = id;
   }
 
+  public String getFullName() {
+    return fullName;
+  }
+
   public void setFullName(String fullName) {
     this.fullName = fullName;
   }
@@ -41,8 +46,16 @@ public class Student {
     this.contractSigned = contractSigned;
   }
 
+  public Curriculum getCurriculum() {
+    return curriculum;
+  }
+
   public void setCurriculum(Curriculum curriculum) {
     this.curriculum = curriculum;
+  }
+
+  public Map<Task, String> getTaskResults() {
+    return taskResults;
   }
 
   public void setTaskResults(Map<Task, String> taskResults) {
@@ -51,28 +64,19 @@ public class Student {
 
   @Override
   public String toString() {
-    return "Student{"
-        + "id="
-        + id
-        + ", Full Name='"
+    return "Full Name: "
         + fullName
-        + '\''
-        + ", City='"
+        + "\n"
+        + "City: "
         + city
-        + '\''
-        + ", E-mail='"
+        + "\n"
+        + "E-mail: "
         + email
-        + '\''
-        + ", Start Date='"
+        + "\n"
+        + "Start Date: "
         + startDate
-        + '\''
-        + ", Contract Signed="
-        + (contractSigned ? "Yes" : "No")
-        + ", Curriculum="
-        + curriculum
-        + ", Task result="
-        + taskResults
-        + '\''
-        + '}';
+        + "\n"
+        + "Contract Signed: "
+        + (contractSigned ? "Yes" : "No");
   }
 }

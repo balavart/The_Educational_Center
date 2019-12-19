@@ -1,4 +1,5 @@
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+package service;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +8,9 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import module.Curriculum;
+import module.Student;
+import module.Task;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -36,6 +40,7 @@ public class StudentHelper {
 
   public List<Student> getAllStudents() {
     List<Student> students = new ArrayList<>();
+
     Element studentProfile = document.getDocumentElement();
     NodeList nodeStudentList = studentProfile.getElementsByTagName("student");
 
@@ -70,7 +75,7 @@ public class StudentHelper {
                   .getTextContent());
       Curriculum curriculum = curriculumHelper.getCurriculum().get(curriculumId);
       Map<Task, String> taskResults = new HashMap<>();
-      Integer grade = null;
+      Integer grade;
 
       NodeList taskProfileNodeList = document.getElementsByTagName("taskResults");
       Node taskProfileNode = taskProfileNodeList.item(taskIdCount);

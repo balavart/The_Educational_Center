@@ -1,9 +1,12 @@
+package service;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import module.Task;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -23,7 +26,9 @@ public class TaskHelper {
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
     dbf.setIgnoringElementContentWhitespace(true);
     DocumentBuilder documentBuilder = dbf.newDocumentBuilder();
-    document = documentBuilder.parse("src/main/resources/StudentReport.xml");
+    document =
+        documentBuilder.parse(
+            "src/main/resources/StudentReport.xml");
   }
 
   public Map<Integer, Task> getAllTasks() {

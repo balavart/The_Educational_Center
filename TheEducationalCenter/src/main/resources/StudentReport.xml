@@ -303,7 +303,7 @@
         </task>
       </taskResults>
     </student>
-    
+
   </studentProfiles>
 
 
@@ -505,7 +505,7 @@
         <title>Overview of Eclipse IDE</title>
         <duration>4</duration>
       </task>
-      
+
       <task id="2" type="Theory">
         <title>Learning the Java Language Basics</title>
         <duration>12</duration>
@@ -520,12 +520,12 @@
         <title>Learning the Java Language advanced features </title>
         <duration>17</duration>
       </task>
-      
+
       <task id="5" type="Practice">
         <title>Practical Task</title>
         <duration>16</duration>
       </task>
-      
+
       <task id="6" type="Theory">
         <title>Learning XML Language</title>
         <duration>6</duration>
@@ -535,52 +535,52 @@
         <title>Practical Task</title>
         <duration>8</duration>
       </task>
-      
+
       <task id="8" type="Theory">
         <title>Learning XSLT and XPath Basics</title>
         <duration>14</duration>
       </task>
-      
+
       <task id="9" type="Theory">
         <title>Equipment Stylesheets</title>
         <duration>8</duration>
       </task>
-      
+
       <task id="10" type="Theory">
         <title>Struts Framework Fundamentals</title>
         <duration>8</duration>
       </task>
-      
+
       <task id="11" type="Practice">
         <title>Struts Framework Task</title>
         <duration>40</duration>
       </task>
-      
+
       <task id="12" type="Practice">
         <title>Java Message Service Task</title>
         <duration>20</duration>
       </task>
-      
+
       <task id="13" type="Theory">
         <title>Mastering Microsoft Project</title>
         <duration>3</duration>
       </task>
-      
+
       <task id="14" type="Practice">
         <title>MS Project Practical Task</title>
         <duration>8</duration>
       </task>
-      
+
       <task id="15" type="Theory">
         <title>Software development process. Development team and its structure</title>
         <duration>12</duration>
       </task>
-      
+
       <task id="16" type="Practice">
         <title>Team Project</title>
         <duration>80</duration>
       </task>
-      
+
     </taskProfiles>
 
   </Info>

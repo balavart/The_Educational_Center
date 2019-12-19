@@ -1,3 +1,5 @@
+package service;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +8,8 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import module.Course;
+import module.Curriculum;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,7 +26,8 @@ public class CurriculumHelper {
   private Document document;
   private CourseHelper courseHelper;
 
-  public CurriculumHelper(CourseHelper courseHelper) throws ParserConfigurationException, IOException, SAXException {
+  public CurriculumHelper(CourseHelper courseHelper)
+      throws ParserConfigurationException, IOException, SAXException {
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
     dbf.setIgnoringElementContentWhitespace(true);
     DocumentBuilder documentBuilder = dbf.newDocumentBuilder();
@@ -55,7 +60,7 @@ public class CurriculumHelper {
               .getTextContent();
       List<Course> courseList = new ArrayList<>();
 
-      NodeList courseProfileNodeList = document.getElementsByTagName("courseTasksList");
+      NodeList courseProfileNodeList = document.getElementsByTagName("courseList");
       Node courseProfileNode = courseProfileNodeList.item(curriculumIdCount);
       Element elementCourseProfile = (Element) courseProfileNode;
       NodeList elementCourseList = elementCourseProfile.getChildNodes();

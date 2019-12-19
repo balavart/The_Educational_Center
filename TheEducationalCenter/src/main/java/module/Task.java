@@ -1,3 +1,5 @@
+package module;
+
 /**
  * @author Vardan Balayan
  * @version 1.8
@@ -18,6 +20,10 @@ public class Task {
     this.type = type;
   }
 
+  public String getTitle() {
+    return title;
+  }
+
   public void setTitle(String title) {
     this.title = title;
   }
@@ -28,17 +34,6 @@ public class Task {
 
   @Override
   public String toString() {
-    return "Task{"
-        + "id="
-        + id
-        + ", Type='"
-        + type
-        + '\''
-        + ", Title='"
-        + title
-        + '\''
-        + ", Duration="
-        + duration
-        + '}';
+    return "Type: " + type + "\n" + "Title: " + title + "\n" + "Duration: " + duration;
   }
 }
