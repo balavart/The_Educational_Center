@@ -1,18 +1,24 @@
-package module;
+package model;
 
 /**
+ * The type Task.
+ *
  * @author Vardan Balayan
  * @version 1.8
  * @created 12/16/2019
  */
 public class Task {
 
-  private Integer id;
+  private int id;
   private String type;
   private String title;
-  private Integer duration;
+  private int duration;
 
-  public void setId(Integer id) {
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
     this.id = id;
   }
 
@@ -28,7 +34,7 @@ public class Task {
     this.title = title;
   }
 
-  public void setDuration(Integer duration) {
+  public void setDuration(int duration) {
     this.duration = duration;
   }
 

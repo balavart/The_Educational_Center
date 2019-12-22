@@ -8,12 +8,19 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
+ * The type View.
+ *
  * @author Vardan_Balaian
  * @version 1.8
  * @since 12/18/2019
  */
 public class View extends Application {
 
+  /**
+   * The entry point of application.
+   *
+   * @param args the input arguments
+   */
   public static void main(String[] args) {
     launch(args);
   }

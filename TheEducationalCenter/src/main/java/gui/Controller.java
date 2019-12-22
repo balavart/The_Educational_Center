@@ -1,73 +1,105 @@
 package gui;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import javafx.fxml.FXML;
-import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javax.xml.parsers.ParserConfigurationException;
-import module.Course;
-import module.Student;
-import module.Task;
+import model.Course;
+import model.Student;
+import model.Task;
 import org.xml.sax.SAXException;
 import service.ParsController;
 
 /**
+ * The type Controller.
+ *
  * @author Vardan Balayan
  * @version 1.8
  * @created 12/18/2019
  */
 public class Controller {
 
-  @FXML private TreeView<String> treeView;
-
+  @FXML private TreeView<Object> treeView;
   @FXML private AnchorPane mainWindow;
-
   @FXML private TextFlow textFlow;
 
+  /**
+   * Menu item action.
+   *
+   * @throws IOException the io exception
+   * @throws SAXException the sax exception
+   * @throws ParserConfigurationException the parser configuration exception
+   */
+  @FXML
+  public void menuItemAction() throws IOException, SAXException, ParserConfigurationException {
+
+    FileChooser fileChooser = new FileChooser();
+    Stage stage = (Stage) mainWindow.getScene().getWindow();
+    fileChooser.setInitialDirectory(new File("src/main/resources"));
+    fileChooser.getExtensionFilters().addAll(new ExtensionFilter("XML Files", "*.xml"));
+    File selectedFile = fileChooser.showOpenDialog(stage);
+
+    if (selectedFile != null) {
+      showData(selectedFile.getPath());
+    }
+  }
+
+  /** Exit action. */
   @FXML
   public void exitAction() {
     Stage stage = (Stage) mainWindow.getScene().getWindow();
     stage.close();
   }
 
-  @FXML
-  void initialize() throws ParserConfigurationException, SAXException, IOException {
-    ParsController parsController = new ParsController();
-    List<Student> studentList = parsController.startParsing();
-    int studentsNum = studentList.size();
+  private void showData(String pathXmlFile)
+      throws ParserConfigurationException, IOException, SAXException {
+    ParsController parsing = new ParsController(pathXmlFile);
+    List<Student> studentList = parsing.startParsing();
 
-    TreeItem<String> students = new TreeItem<>("Students");
-    TreeItem<String> studentFullNames;
-    TreeItem<String> studentCurriculumTitles;
-    TreeItem<String> courseTitle;
-    TreeItem<String> studentTaskTitles;
+    StudentValues students = new StudentValues("Students", "Students");
+    StudentValues studentFullNames;
+    StudentValues studentCurriculumTitles;
+    StudentValues courseTitle;
+    StudentValues studentTaskTitles;
 
     treeView.setRoot(students);
 
-    for (Student student : studentList) {
-      studentFullNames = new TreeItem<>(student.getFullName());
+    for (int i = 0; i < studentList.size(); i++) {
+      studentFullNames =
+          new StudentValues(studentList.get(i).getFullName(), (studentList.get(i).toString()));
       students.getChildren().add(studentFullNames);
 
-      studentCurriculumTitles = new TreeItem<>(student.getCurriculum().getTitle());
+      studentCurriculumTitles =
+          new StudentValues(
+              studentList.get(i).getCurriculum().getTitle(),
+              studentList.get(i).getCurriculum().toString());
       studentFullNames.getChildren().add(studentCurriculumTitles);
 
-      List<Course> courseList = student.getCurriculum().getCurriculumCourseList();
-      int coursesNum = student.getCurriculum().getCurriculumCourseList().size();
+      List<Course> courseList = studentList.get(i).getCurriculum().getCurriculumCourseList();
+      int coursesNum = studentList.get(i).getCurriculum().getCurriculumCourseList().size();
 
       for (int j = 0; j < coursesNum; j++) {
-        courseTitle = new TreeItem<>(courseList.get(j).getTitle());
+        courseTitle = new StudentValues(courseList.get(j).getTitle(), courseList.get(j).toString());
         studentCurriculumTitles.getChildren().add(courseTitle);
 
         List<Task> taskList = courseList.get(j).getCourseTaskList();
         int tasksNum = courseList.get(j).getCourseTaskList().size();
 
         for (int k = 0; k < tasksNum; k++) {
-          studentTaskTitles = new TreeItem<>(taskList.get(k).getTitle());
+          studentTaskTitles =
+              new StudentValues(
+                  taskList.get(k).getTitle(),
+                  taskList.get(k).toString(),
+                  i,
+                  taskList.get(k).getId());
           courseTitle.getChildren().add(studentTaskTitles);
         }
       }
@@ -78,52 +110,22 @@ public class Controller {
         .selectedItemProperty()
         .addListener(
             (observable, oldValue, newValue) -> {
-              Text text;
+              StudentValues studentValue = (StudentValues) newValue;
+              textFlow.getChildren().clear();
+              Text text = new Text(((StudentValues) newValue).getDescription());
+              textFlow.getChildren().add(text);
 
-              if (newValue.getValue().equals(students.getValue())) {
-                textFlow.getChildren().clear();
-                text = new Text("Students");
-                textFlow.getChildren().addAll(text);
-              }
-
-              for (Student student : studentList) {
-                List<Course> courseList = student.getCurriculum().getCurriculumCourseList();
-                int coursesNum = student.getCurriculum().getCurriculumCourseList().size();
-
-                if (newValue.getValue().equals(student.getFullName())) {
-                  textFlow.getChildren().clear();
-                  text = new Text(student.toString());
-                  textFlow.getChildren().addAll(text);
-                }
-
-                if (newValue.getValue().equals(student.getCurriculum().getTitle())) {
-                  textFlow.getChildren().clear();
-                  text = new Text(student.getCurriculum().toString());
-                  textFlow.getChildren().addAll(text);
-                }
-
-                for (int j = 0; j < coursesNum; j++) {
-                  int tasksNum = courseList.get(j).getCourseTaskList().size();
-
-                  if (newValue.getValue().equals(courseList.get(j).getTitle())) {
-                    textFlow.getChildren().clear();
-                    text = new Text(courseList.get(j).toString());
-                    textFlow.getChildren().addAll(text);
-                  }
-
-                  for (int k = 0; k < tasksNum; k++) {
-                    student
-                        .getTaskResults()
-                        .forEach(
-                            ((task, s) -> {
-                              if (newValue.getValue().equals(task.getTitle())) {
-                                textFlow.getChildren().clear();
-                                Text text2 = new Text(task.toString() + "\n" + s);
-                                textFlow.getChildren().add(text2);
-                              }
-                            }));
-                  }
-                }
+              if (studentValue.getStudentId() >= 0) {
+                studentList
+                    .get(studentValue.getStudentId())
+                    .getTaskResults()
+                    .forEach(
+                        ((task, status) -> {
+                          if (studentValue.getTaskID() == task.getId()) {
+                            Text taskResultText = new Text("\n" + status);
+                            textFlow.getChildren().add(taskResultText);
+                          }
+                        }));
               }
             });
   }

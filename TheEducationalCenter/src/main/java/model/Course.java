@@ -1,21 +1,23 @@
-package module;
+package model;
 
 import java.util.List;
 
 /**
+ * The type Course.
+ *
  * @author Vardan Balayan
  * @version 1.8
  * @created 12/16/2019
  */
-public class Curriculum {
+public class Course {
 
-  private Integer id;
+  private int id;
   private String title;
   private String author;
   private String creationDate;
-  private List<Course> curriculumCourseList;
+  private List<Task> courseTaskList;
 
-  public void setId(Integer id) {
+  public void setId(int id) {
     this.id = id;
   }
 
@@ -35,18 +37,18 @@ public class Curriculum {
     this.creationDate = creationDate;
   }
 
-  public List<Course> getCurriculumCourseList() {
-    return curriculumCourseList;
+  public List<Task> getCourseTaskList() {
+    return courseTaskList;
   }
 
-  public void setCurriculumCourseList(List<Course> curriculumCourseList) {
-    this.curriculumCourseList = curriculumCourseList;
+  public void setCourseTaskList(List<Task> courseTaskList) {
+    this.courseTaskList = courseTaskList;
   }
 
-  private String getCoursesTitle() {
+  private String getTasksTitles() {
     StringBuilder stringBuilder = new StringBuilder();
-    for (Course course : curriculumCourseList) {
-      stringBuilder.append(course.getTitle()).append("\n");
+    for (Task task : courseTaskList) {
+      stringBuilder.append(task.getTitle()).append("\n");
     }
     return stringBuilder.toString();
   }
@@ -63,8 +65,8 @@ public class Curriculum {
         + creationDate
         + "\n"
         + "\n"
-        + "Curriculum Course List: "
+        + "Course Task List: "
         + "\n"
-        + getCoursesTitle();
+        + getTasksTitles();
   }
 }

@@ -1,15 +1,17 @@
-package module;
+package model;
 
 import java.util.Map;
 
 /**
+ * The type Student.
+ *
  * @author Vardan Balayan
  * @version 1.8
  * @created 12/16/2019
  */
 public class Student {
 
-  private Integer id;
+  private int id;
   private String fullName;
   private String city;
   private String email;
@@ -18,7 +20,7 @@ public class Student {
   private Curriculum curriculum;
   private Map<Task, String> taskResults;
 
-  public void setId(Integer id) {
+  public void setId(int id) {
     this.id = id;
   }
 

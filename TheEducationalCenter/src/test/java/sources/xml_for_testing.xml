@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Info>
+
+  <studentProfiles>
+    <student id="1">
+      <fullName>Student's Full Name Test</fullName>
+      <city>City Test</city>
+      <email>E-mail Test</email>
+      <startDate>Start Date Test</startDate>
+      <contractSigned>false</contractSigned>
+      <curriculumId>1</curriculumId>
+      <taskResults>
+        <task id="1">
+          <status>Status Test</status>
+          <grade>5</grade>
+        </task>
+      </taskResults>
+    </student>
+  </studentProfiles>
+
+  <curriculumProfiles>
+    <curriculum id="1">
+      <title>Curriculum's Title Test</title>
+      <author>Curriculum's Author Test</author>
+      <creationDate>Curriculum's Creation Date Test</creationDate>
+      <courseList>
+        <course>
+          <id>1</id>
+        </course>
+      </courseList>
+    </curriculum>
+  </curriculumProfiles>
+
+  <courseProfiles>
+    <course id="1">
+      <title>Course's Title Test</title>
+      <author>Course's Author Test</author>
+      <creationDate>Course's Creation Date Test</creationDate>
+      <courseTasksList>
+        <taskId id="1">
+          <id>1</id>
+        </taskId>
+      </courseTasksList>
+    </course>
+  </courseProfiles>
+
+  <taskProfiles>
+    <task id="1" type="Task's Type Test">
+      <title>Task's Title Test</title>
+      <duration>8</duration>
+    </task>
+  </taskProfiles>
+
+</Info>

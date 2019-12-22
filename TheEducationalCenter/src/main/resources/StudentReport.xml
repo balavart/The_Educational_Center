@@ -5,7 +5,7 @@
   <studentProfiles>
 
     <student id="1">
-      <fullName>Alexander Sergeev</fullName>
+      <fullName>Petr Sergeev</fullName>
       <city>Perm</city>
       <email>alexperm@gmail.com</email>
       <startDate>2019-12-13</startDate>
@@ -517,7 +517,7 @@
       </task>
 
       <task id="4" type="Theory">
-        <title>Learning the Java Language advanced features </title>
+        <title>Learning the Java Language advanced features</title>
         <duration>17</duration>
       </task>
 
