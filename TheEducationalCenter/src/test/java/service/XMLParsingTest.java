@@ -117,6 +117,7 @@ class XMLParsingTest {
                 });
           }
         };
+
     CurriculumHelper curriculumHelperExample =
         new CurriculumHelperImpl(
             courseHelperExample, documentBuilderFactory, documentBuilder, document);
