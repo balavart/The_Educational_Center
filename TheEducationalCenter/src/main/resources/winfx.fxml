@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.TextFlow?>
+<AnchorPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+  minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+  xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.epam.training_center.balaian.gui.Controller">
+  <children>
+    <VBox prefHeight="600.0" prefWidth="800.0">
+      <children>
+        <AnchorPane prefHeight="26.0" prefWidth="600.0">
+          <children>
+            <MenuBar prefHeight="25.0" prefWidth="64.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuItem" mnemonicParsing="false" onAction="#menuItemAction"
+                      text="Import from XML..."/>
+                    <MenuItem mnemonicParsing="false" onAction="#exitAction" text="Exit"/>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+          </children>
+          <effect>
+            <InnerShadow/>
+          </effect>
+        </AnchorPane>
+        <AnchorPane prefHeight="575.0" prefWidth="800.0">
+          <children>
+            <SplitPane dividerPositions="0.5175438596491229" prefHeight="575.0" prefWidth="800.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="373.0">
+                  <children>
+                    <TreeView fx:id="treeView" prefHeight="574.0" prefWidth="410.0"/>
+                  </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="396.0">
+                  <children>
+                    <TextFlow fx:id="textFlow" prefHeight="574.0" prefWidth="361.0"/>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </children>
+    </VBox>
+  </children>
+  <effect>
+    <Lighting diffuseConstant="1.51" specularConstant="2.0" specularExponent="40.0"
+      surfaceScale="1.38">
+      <bumpInput>
+        <Shadow/>
+      </bumpInput>
+      <light>
+        <Light.Distant azimuth="360.0" elevation="40.81">
+          <color>
+            <Color red="0.6098318696022034" green="0.7503959536552429" blue="0.9342105388641357"/>
+          </color>
+        </Light.Distant>
+      </light>
+    </Lighting>
+  </effect>
+</AnchorPane>

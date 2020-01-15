@@ -1,0 +1,589 @@
+<TheEducationalCenter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="Report.xsd">
+
+
+  <studentProfiles>
+
+    <student id="1">
+      <fullName>Petr Sergeev</fullName>
+      <city>Perm</city>
+      <email>alexperm@gmail.com</email>
+      <startDate>2019-12-13</startDate>
+      <contractSigned>false</contractSigned>
+      <curriculumId>1</curriculumId>
+      <taskResults>
+        <task id="1">
+          <status>In the process of studying</status>
+          <grade>0</grade>
+        </task>
+        <task id="2">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="3">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="4">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="5">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="6">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="7">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="8">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="9">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="10">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="11">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="12">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+      </taskResults>
+    </student>
+
+    <student id="2">
+      <fullName>Boris Romanov</fullName>
+      <city>Moscow</city>
+      <email>bormoscowepam@rambler.com</email>
+      <startDate>2018-08-01</startDate>
+      <contractSigned>true</contractSigned>
+      <curriculumId>1</curriculumId>
+      <taskResults>
+        <task id="1">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="2">
+          <status>Study completed</status>
+          <grade>5</grade>
+        </task>
+        <task id="3">
+          <status>Assignment Accepted</status>
+          <grade>4</grade>
+        </task>
+        <task id="4">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="5">
+          <status>Assignment Accepted</status>
+          <grade>4</grade>
+        </task>
+        <task id="6">
+          <status>Study completed</status>
+          <grade>3</grade>
+        </task>
+        <task id="7">
+          <status>Assignment Accepted</status>
+          <grade>4</grade>
+        </task>
+        <task id="8">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="9">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="10">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="11">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="12">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="13">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="14">
+          <status>Assignment Accepted</status>
+          <grade>3</grade>
+        </task>
+        <task id="15">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="16">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+      </taskResults>
+    </student>
+
+    <student id="3">
+      <fullName>Vadim Petrov</fullName>
+      <city>Brooklyn</city>
+      <email>usavadpet@gmail.com</email>
+      <startDate>2019-12-20</startDate>
+      <contractSigned>false</contractSigned>
+      <curriculumId>2</curriculumId>
+      <taskResults>
+        <task id="1">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="2">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="3">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="4">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="5">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="6">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="7">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="8">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="9">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="10">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="11">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="12">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+      </taskResults>
+    </student>
+
+    <student id="4">
+      <fullName>Ivan Fedorov</fullName>
+      <city>Marrakesh</city>
+      <email>jojemaraka@gmail.com</email>
+      <startDate>2019-10-08</startDate>
+      <contractSigned>false</contractSigned>
+      <curriculumId>3</curriculumId>
+      <taskResults>
+        <task id="1">
+          <status>Study completed</status>
+          <grade>5</grade>
+        </task>
+        <task id="2">
+          <status>Study completed</status>
+          <grade>5</grade>
+        </task>
+        <task id="3">
+          <status>Assignment Accepted</status>
+          <grade>3</grade>
+        </task>
+        <task id="4">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="5">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="6">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="7">
+          <status>Assignment Accepted</status>
+          <grade>5</grade>
+        </task>
+        <task id="8">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="9">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="10">
+          <status>Study completed</status>
+          <grade>4</grade>
+        </task>
+        <task id="11">
+          <status>Is under verification</status>
+          <grade>0</grade>
+        </task>
+        <task id="12">
+          <status>Is under verification</status>
+          <grade>0</grade>
+        </task>
+        <task id="13">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="14">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+        <task id="15">
+          <status>The study has not begun</status>
+          <grade>0</grade>
+        </task>
+        <task id="16">
+          <status>Execution did not start</status>
+          <grade>0</grade>
+        </task>
+      </taskResults>
+    </student>
+
+  </studentProfiles>
+
+
+  <Info>
+
+    <curriculumProfiles>
+
+      <curriculum id="1">
+        <title>Complete curriculum</title>
+        <author>Eduard Smith</author>
+        <creationDate>2016-08-19</creationDate>
+        <courseList>
+          <course>
+            <id>1</id>
+          </course>
+          <course>
+            <id>2</id>
+          </course>
+          <course>
+            <id>3</id>
+          </course>
+          <course>
+            <id>4</id>
+          </course>
+          <course>
+            <id>5</id>
+          </course>
+          <course>
+            <id>6</id>
+          </course>
+          <course>
+            <id>7</id>
+          </course>
+          <course>
+            <id>8</id>
+          </course>
+        </courseList>
+      </curriculum>
+
+      <curriculum id="2">
+        <title>Special curriculum 1</title>
+        <author>Sensei Rat</author>
+        <creationDate>2015-04-06</creationDate>
+        <courseList>
+          <course>
+            <id>4</id>
+          </course>
+          <course>
+            <id>5</id>
+          </course>
+        </courseList>
+      </curriculum>
+
+      <curriculum id="3">
+        <title>Shortened curriculum</title>
+        <author>Tom Jackson</author>
+        <creationDate>2014-02-02</creationDate>
+        <courseList>
+          <course>
+            <id>1</id>
+          </course>
+          <course>
+            <id>2</id>
+          </course>
+          <course>
+            <id>3</id>
+          </course>
+          <course>
+            <id>7</id>
+          </course>
+          <course>
+            <id>8</id>
+          </course>
+        </courseList>
+      </curriculum>
+
+    </curriculumProfiles>
+
+    <courseProfiles>
+
+      <course id="1">
+        <title>Course "Overview of Eclipse IDE"</title>
+        <author>Goro Mortal</author>
+        <creationDate>1999-07-15</creationDate>
+        <courseTasksList>
+          <taskId id="1">
+            <id>1</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="2">
+        <title>Course "Java Basics"</title>
+        <author>Igor Smertov</author>
+        <creationDate>2014-02-02</creationDate>
+        <courseTasksList>
+          <taskId id="2">
+            <id>2</id>
+          </taskId>
+          <taskId id="3">
+            <id>3</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="3">
+        <title>Course "Java - extended capabilities"</title>
+        <author>Jimmy Tal</author>
+        <creationDate>2015-05-22</creationDate>
+        <courseTasksList>
+          <taskId id="4">
+            <id>4</id>
+          </taskId>
+          <taskId id="5">
+            <id>5</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="4">
+        <title>Course "XML"</title>
+        <author>Jamal Lammak</author>
+        <creationDate>2004-08-09</creationDate>
+        <courseTasksList>
+          <taskId id="6">
+            <id>6</id>
+          </taskId>
+          <taskId id="7">
+            <id>7</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="5">
+        <title>Course "XSLT and XPath"</title>
+        <author>Andrew Pojo</author>
+        <creationDate>2010-11-11</creationDate>
+        <courseTasksList>
+          <taskId id="8">
+            <id>8</id>
+          </taskId>
+          <taskId id="9">
+            <id>9</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="6">
+        <title>Course "Struts Framework Technology"</title>
+        <author>Peter Parkovka</author>
+        <creationDate>2001-10-12</creationDate>
+        <courseTasksList>
+          <taskId id="10">
+            <id>10</id>
+          </taskId>
+          <taskId id="11">
+            <id>11</id>
+          </taskId>
+          <taskId id="12">
+            <id>12</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="7">
+        <title>Course "Software manufacturing process"</title>
+        <author>Jack Johnson</author>
+        <creationDate>2010-02-23</creationDate>
+        <courseTasksList>
+          <taskId id="13">
+            <id>13</id>
+          </taskId>
+          <taskId id="14">
+            <id>14</id>
+          </taskId>
+          <taskId id="15">
+            <id>15</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+      <course id="8">
+        <title>Course "Software development process"</title>
+        <author>Antony Gull</author>
+        <creationDate>2006-08-11</creationDate>
+        <courseTasksList>
+          <taskId id="16">
+            <id>16</id>
+          </taskId>
+        </courseTasksList>
+      </course>
+
+    </courseProfiles>
+
+
+    <taskProfiles>
+
+      <task id="1" type="Theory">
+        <title>Overview of Eclipse IDE</title>
+        <duration>4</duration>
+      </task>
+
+      <task id="2" type="Theory">
+        <title>Learning the Java Language Basics</title>
+        <duration>12</duration>
+      </task>
+
+      <task id="3" type="Practice">
+        <title>Practical Task</title>
+        <duration>4</duration>
+      </task>
+
+      <task id="4" type="Theory">
+        <title>Learning the Java Language advanced features</title>
+        <duration>17</duration>
+      </task>
+
+      <task id="5" type="Practice">
+        <title>Practical Task</title>
+        <duration>16</duration>
+      </task>
+
+      <task id="6" type="Theory">
+        <title>Learning XML Language</title>
+        <duration>6</duration>
+      </task>
+
+      <task id="7" type="Practice">
+        <title>Practical Task</title>
+        <duration>8</duration>
+      </task>
+
+      <task id="8" type="Theory">
+        <title>Learning XSLT and XPath Basics</title>
+        <duration>14</duration>
+      </task>
+
+      <task id="9" type="Theory">
+        <title>Equipment Stylesheets</title>
+        <duration>8</duration>
+      </task>
+
+      <task id="10" type="Theory">
+        <title>Struts Framework Fundamentals</title>
+        <duration>8</duration>
+      </task>
+
+      <task id="11" type="Practice">
+        <title>Struts Framework Task</title>
+        <duration>40</duration>
+      </task>
+
+      <task id="12" type="Practice">
+        <title>Java Message Service Task</title>
+        <duration>20</duration>
+      </task>
+
+      <task id="13" type="Theory">
+        <title>Mastering Microsoft Project</title>
+        <duration>3</duration>
+      </task>
+
+      <task id="14" type="Practice">
+        <title>MS Project Practical Task</title>
+        <duration>8</duration>
+      </task>
+
+      <task id="15" type="Theory">
+        <title>Software development process. Development team and its structure</title>
+        <duration>12</duration>
+      </task>
+
+      <task id="16" type="Practice">
+        <title>Team Project</title>
+        <duration>80</duration>
+      </task>
+
+    </taskProfiles>
+
+  </Info>
+
+
+</TheEducationalCenter>
